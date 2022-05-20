@@ -14,10 +14,13 @@
   --clr-off-white: #FEFEFE;
   --clr-white: #FFFFFF;
 
+  --box-shadow-blue: #4660BB;
+
 
   //typography
-  --ff-500: 2.6rem;
-  --ff-400: 2.2rem;
+  --ff-600: 2.6rem;
+  --ff-500: 2.2rem;
+  --ff-400: 1.8rem;
   --ff-300: 1.6rem;
   --ff-200: 1.5rem;
   --ff-100: 1.3rem;
@@ -57,6 +60,11 @@ body {
 
 .container {
   width: 73rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
 }
 
 //Utility
