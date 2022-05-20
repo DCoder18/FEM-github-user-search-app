@@ -5,7 +5,7 @@
         <h1>devfinder</h1>
         <div class="color-switch">
           <span class="color-switch__title">Dark</span>
-          <img class="color-switch__icon" src="../assets/images/icon-moon.svg" alt="">
+          <img class="icon" src="../assets/images/icon-moon.svg" alt="">
         </div>
       </div>
     </div>
@@ -18,10 +18,11 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-bottom: 3.6rem;
   }
   h1 {
     color: var(--clr-black-3);
-    font-size: var(--ff-500);
+    font-size: var(--ff-600);
   }
 
   .color-switch {
@@ -35,14 +36,8 @@
       color: var(--clr-grey-blue);
       font-weight: 700;
       font-size: var(--ff-100);
-    }
-
-    &__icon {
-      width: 2rem;
-      height: 2rem;
-      position: absolute;
-      left: 4.5rem;
-      bottom: 2rem;
+      margin-right: 1.6rem;
+      letter-spacing: 2.4px;
     }
   }
 </style>
