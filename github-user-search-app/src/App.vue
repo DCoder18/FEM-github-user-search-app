@@ -6,6 +6,7 @@
       </header>
       <main>
         <SearchBar></SearchBar>
+        <ProfileSection></ProfileSection>
       </main>
     </div>
   </div>
@@ -14,12 +15,14 @@
 <script>
 import HeaderSection from './components/HeaderSection.vue'
 import SearchBar from './components/SearchBar.vue'
+import ProfileSection from './components/ProfileSection.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderSection,
     SearchBar,
+    ProfileSection,
   }
 }
 </script>
