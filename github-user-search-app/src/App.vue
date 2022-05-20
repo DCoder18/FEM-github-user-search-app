@@ -1,7 +1,13 @@
 <template>
   <div id="app">
-    <HeaderSection></HeaderSection>
-    <SearchBar></SearchBar>
+    <div class="container">
+      <header>
+        <HeaderSection></HeaderSection>
+      </header>
+      <main>
+        <SearchBar></SearchBar>
+      </main>
+    </div>
   </div>
 </template>
 

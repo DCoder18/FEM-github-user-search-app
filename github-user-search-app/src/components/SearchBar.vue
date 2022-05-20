@@ -1,21 +1,21 @@
 <template>
-  <main>
-    <section class="search">
-      <form action="#" method="post">
-        <div class="searchbar">
-          <input type="search" name="" id="" placeholder="Search GitHub username...">
-          <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
-          <button class="btn-search">Search</button>
-        </div>
-      </form>
-    </section>
-  </main>
+  <section class="search">
+    <form action="#" method="post">
+      <div class="searchbar">
+        <input type="search" name="" id="" placeholder="Search GitHub username...">
+        <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
+        <button class="btn-search">Search</button>
+      </div>
+    </form>
+  </section>
 </template>
 
 
 <style lang="scss" scoped>
   .searchbar {
     position: relative;
+    margin-bottom: 2.4rem;
+    background-color: var(--clr-off-white);
   }
 
   input {

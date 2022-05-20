@@ -1,15 +1,11 @@
 <template>
-  <header>
-    <div class="container">
-      <div class="header">
-        <h1>devfinder</h1>
-        <div class="color-switch">
-          <span class="color-switch__title">Dark</span>
-          <img class="icon" src="../assets/images/icon-moon.svg" alt="">
-        </div>
-      </div>
+  <section class="header">
+    <h1>devfinder</h1>
+    <div class="color-switch">
+      <span class="color-switch__title">Dark</span>
+      <img class="icon" src="../assets/images/icon-moon.svg" alt="">
     </div>
-  </header>
+  </section>
 </template>
 
 
@@ -20,6 +16,7 @@
     width: 100%;
     margin-bottom: 3.6rem;
   }
+  
   h1 {
     color: var(--clr-black-3);
     font-size: var(--ff-600);
