@@ -15,7 +15,6 @@
   .searchbar {
     position: relative;
     margin-bottom: 2.4rem;
-    background-color: var(--clr-off-white);
   }
 
   input {
@@ -25,10 +24,10 @@
     outline: none;
     border-radius: 1.5rem;
     box-shadow: 0px 6px 20px -15px var(--box-shadow-blue);
-    position: absolute;
     font-size: var(--ff-400);
     font-family: inherit;
     padding-left: 8rem;
+    background-color: var(--clr-off-white);
   }
 
   .icon {
