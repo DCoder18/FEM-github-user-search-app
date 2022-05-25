@@ -1,17 +1,20 @@
 <template>
   <section class="profile">
-    <ProfileBasic> </ProfileBasic>
+    <ProfileBasic />
+    <ProfileStats />
   </section>
 </template>
 
 
 <script>
 import ProfileBasic from './ProfileBasic.vue'
+import ProfileStats from './ProfileStats.vue'
 
 export default {
   name: 'App',
   components: {
     ProfileBasic,
+    ProfileStats,
   }
 }
 </script>

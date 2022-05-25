@@ -18,12 +18,12 @@
 
 
   //typography
-  --ff-600: 2.6rem;
-  --ff-500: 2.2rem;
-  --ff-400: 1.8rem;
-  --ff-300: 1.6rem;
-  --ff-200: 1.5rem;
-  --ff-100: 1.3rem;
+  --fs-600: 2.6rem;
+  --fs-500: 2.2rem;
+  --fs-400: 1.8rem;
+  --fs-300: 1.6rem;
+  --fs-200: 1.5rem;
+  --fs-100: 1.3rem;
 }
 
 //Reset
@@ -49,7 +49,7 @@ img {
 
 body {
   font-family: 'Space Mono', monospace;
-  font-style: var(--ff-300);
+  font-style: var(--fs-300);
   color: var(--clr-navy-blue);
   background-color: var(--clr-grey);
   line-height: 1.5;
@@ -76,5 +76,5 @@ body {
   text-transform: uppercase;
 }
 
-.ff-500 {font-size: var(--ff-500);}
-.ff-100 {font-size: var(--ff-100);}
+.ff-500 {font-size: var(--fs-500);}
+.ff-100 {font-size: var(--fs-100);}
