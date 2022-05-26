@@ -27,6 +27,15 @@
     grid-column: 2 / 4; 
     grid-gap: 10rem;
     padding: 1.5rem 3rem;
+
+    @media (max-width:45em) {
+      grid-column: 1 / span 3;
+      grid-gap: 2rem;
+    }
+
+    @media (max-width:30em) {
+      grid-gap: 2rem;
+    }
     
     &__item {
       h4 {

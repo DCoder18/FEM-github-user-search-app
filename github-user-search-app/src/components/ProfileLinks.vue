@@ -31,9 +31,22 @@
     grid-gap: 2rem 10rem;
     margin-top: 30px;
 
+    @media (max-width:45em) {
+      grid-column: 1 / span 3;
+      grid-gap: 2.5rem;
+    }
+
+    @media (max-width:30em) {
+      display: block;
+    }
+
     &__item {
       display: flex;
       align-items: center;
+      
+      @media (max-width:30em) {
+        margin-bottom: 1.6rem;
+      } 
     }
 
     &__icon {

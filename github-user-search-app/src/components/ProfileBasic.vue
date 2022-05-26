@@ -25,12 +25,20 @@
       color: var(--clr-bright-blue);
       font-weight: 400;
       margin-bottom: 2rem;
+
+      @media (max-width:45em) {
+        margin-bottom: 4px;
+      }
     }
 
     &--join-date{
       font-size: var(--fs-200);
       color: var(--clr-grey-blue);
       grid-column: 3 / 4;
+
+      @media (max-width:45em) {
+        grid-column: 2 / span 2;
+      }
     }
 
     &--bio {
@@ -38,6 +46,11 @@
       color: var(--clr-navy-blue);
       grid-column: 2 / 4;
       margin-bottom: 3rem;
+
+      @media (max-width:45em) {
+        grid-column: 1 / span 3;
+        margin-top: 2.4rem;
+      }
     }
   }
 </style>
