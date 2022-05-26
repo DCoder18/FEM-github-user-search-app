@@ -1,18 +1,18 @@
 <template>
  <div class="stats">
   <div class="stats__item">
-    <h4>Repos</h4>
-    <p class="stats--repos">8</p>
+    <h4 :class="{'dark-mode' : darkMode}">Repos</h4>
+    <p class="stats--repos" :class="{'dark-mode' : darkMode}">8</p>
   </div>
 
   <div class="stats__item">
-    <h4>Followers</h4>
-    <p class="stats--followers">3898</p>
+    <h4 :class="{'dark-mode' : darkMode}">Followers</h4>
+    <p class="stats--followers" :class="{'dark-mode' : darkMode}">3898</p>
   </div>
 
   <div class="stats__item">
-    <h4>Following</h4>
-    <p class="stats--following">9</p>
+    <h4 :class="{'dark-mode' : darkMode}">Following</h4>
+    <p class="stats--following" :class="{'dark-mode' : darkMode}">9</p>
   </div>
  </div>
 </template>

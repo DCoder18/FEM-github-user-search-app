@@ -1,11 +1,11 @@
 <template>
   <img class="profile--img" src="" alt="Img">
   <div>
-    <h2 class="profile--name">The Octocat</h2>
+    <h2 class="profile--name" :class="{'dark-mode' : darkMode}">The Octocat</h2>
     <h3 class="profile--username">@octocat</h3>
   </div>
-  <p class="profile--join-date">Joined 25 Jan 2011</p>
-  <p class="profile--bio">
+  <p class="profile--join-date" :class="{'dark-mode' : darkMode}">Joined 25 Jan 2011</p>
+  <p class="profile--bio" :class="{'dark-mode' : darkMode}">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita iste officiis sapiente et ab voluptatibus.
   </p>
 </template>

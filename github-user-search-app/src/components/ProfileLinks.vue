@@ -2,22 +2,22 @@
  <div class="links">
   <div class="links__item">
     <span><img class="links__icon links__icon--location" src="../assets/images/icon-location.svg" alt=""></span>
-    <span><p class="links--location">San Francisco</p></span>
+    <span><p class="links--location" :class="{'dark-mode' : darkMode}">San Francisco</p></span>
   </div>
 
   <div class="links__item">
     <span><img class="links__icon links__icon--twitter" src="../assets/images/icon-twitter.svg" alt=""></span>
-    <span><p class="links--twitter">@octocat</p></span>
+    <span><p class="links--twitter" :class="{'dark-mode' : darkMode}">@octocat</p></span>
   </div>
 
   <div class="links__item">
     <span><img class="links__icon links__icon--website" src="../assets/images/icon-website.svg" alt=""></span>
-    <span><p class="links--website">https://github.blog</p></span>
+    <span><p class="links--website" :class="{'dark-mode' : darkMode}">https://github.blog</p></span>
   </div>
 
    <div class="links__item">
     <span><img class="links__icon links__icon--company" src="../assets/images/icon-company.svg" alt=""></span>
-    <span><p class="links--company">@github</p></span>
+    <span><p class="links--company" :class="{'dark-mode' : darkMode}">@github</p></span>
   </div>
  </div>
 </template>

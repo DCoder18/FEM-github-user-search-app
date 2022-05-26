@@ -1,13 +1,24 @@
 <template>
   <section class="header">
     <h1>devfinder</h1>
-    <div class="color-switch">
+    <div class="color-switch" @click="darkMode = !darkMode">
       <span class="color-switch__title">Dark</span>
       <img class="icon" src="../assets/images/icon-moon.svg" alt="">
     </div>
   </section>
 </template>
 
+<script>
+export default {
+  name: 'App',
+
+  data() {
+    return {
+      darkMode: true
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
   .header {

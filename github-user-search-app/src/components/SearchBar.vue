@@ -2,7 +2,7 @@
   <section class="search">
     <form action="#" method="post">
       <div class="searchbar">
-        <input type="search" name="" id="" placeholder="Search GitHub username...">
+        <input :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
         <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
         <button class="btn-search">Search</button>
       </div>
