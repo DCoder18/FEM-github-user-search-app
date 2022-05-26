@@ -24,8 +24,7 @@
     border-radius: 1rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column: 2 / 3;
-    place-self: center;
+    grid-column: 2 / 4; 
     grid-gap: 10rem;
     padding: 1.5rem 3rem;
     
