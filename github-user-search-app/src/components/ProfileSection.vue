@@ -30,6 +30,7 @@ export default {
     background-color: var(--clr-off-white);
     border-radius: 1.5rem;
     padding: 4.8rem;
+    box-shadow: 0px 6px 20px -15px var(--box-shadow-blue);
 
     @media (max-width:30em) {
       display: block;

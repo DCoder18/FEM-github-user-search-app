@@ -28,6 +28,10 @@
     font-family: inherit;
     padding-left: 8rem;
     background-color: var(--clr-off-white);
+
+    @media (max-width:30em) {
+      padding-left: 6rem;
+    }
   }
 
   .icon {
