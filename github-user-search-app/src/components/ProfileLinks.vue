@@ -76,6 +76,10 @@
     p {
       font-size: var(--fs-200);
       color: var(--clr-navy-blue);
+
+      &.dark-mode {
+        color: var(--white);
+      }
     }
   }
 </style>

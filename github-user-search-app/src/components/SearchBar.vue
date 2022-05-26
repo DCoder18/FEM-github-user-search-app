@@ -29,6 +29,11 @@
     padding-left: 8rem;
     background-color: var(--clr-off-white);
 
+    &.dark-mode {
+      background-color: var(--clr-dark-blue);
+      color: var(--clr-white);
+    }
+
     @media (max-width:30em) {
       padding-left: 6rem;
     }

@@ -8,7 +8,6 @@
   <p class="profile--bio">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita iste officiis sapiente et ab voluptatibus.
   </p>
-  
 </template>
 
 
@@ -18,6 +17,10 @@
       font-size: var(--fs-600);
       color: var(--clr-black-1);
       font-weight: 700;
+
+      &.dark-mode {
+        color: var(--white);
+      }
     }
 
     &--username {
@@ -36,6 +39,10 @@
       color: var(--clr-grey-blue);
       grid-column: 3 / 4;
 
+      &.dark-mode {
+        color: var(--white);
+      }
+
       @media (max-width:45em) {
         grid-column: 2 / span 2;
       }
@@ -46,6 +53,10 @@
       color: var(--clr-navy-blue);
       grid-column: 2 / 4;
       margin-bottom: 3rem;
+
+      &.dark-mode {
+        color: var(--white);
+      }
 
       @media (max-width:45em) {
         grid-column: 1 / span 3;

@@ -41,13 +41,21 @@
       h4 {
         font-size: var(--fs-100);
         color: var(--clr-navy-blue);
-        font-weight: 400;;
+        font-weight: 400;
+
+        &.dark-mode {
+          color: var(--white);
+        }
       }
 
       p {
         font-size: var(--fs-500);
         color: var(--clr-black-1);
         font-weight: 700;
+
+        &.dark-mode {
+          color: var(--white);
+        }
       }
     }
   }

@@ -20,6 +20,10 @@
   h1 {
     color: var(--clr-black-3);
     font-size: var(--fs-600);
+
+    &.dark-mode {
+      color: var(--white);
+    }
   }
 
   .color-switch {
@@ -35,6 +39,10 @@
       font-size: var(--fs-100);
       margin-right: 1.6rem;
       letter-spacing: 2.4px;
+
+      &.dark-mode {
+        color: var(--white);
+      }
     }
   }
 </style>

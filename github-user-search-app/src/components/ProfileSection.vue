@@ -1,5 +1,5 @@
 <template>
-  <section class="profile">
+  <section class="profile dark-scheme">
     <ProfileBasic />
     <ProfileStats />
     <ProfileLinks />
