@@ -2,6 +2,7 @@
   <section class="profile">
     <ProfileBasic />
     <ProfileStats />
+    <ProfileLinks />
   </section>
 </template>
 
@@ -9,12 +10,14 @@
 <script>
 import ProfileBasic from './ProfileBasic.vue'
 import ProfileStats from './ProfileStats.vue'
+import ProfileLinks from './ProfileLinks.vue'
 
 export default {
   name: 'App',
   components: {
     ProfileBasic,
     ProfileStats,
+    ProfileLinks,
   }
 }
 </script>
