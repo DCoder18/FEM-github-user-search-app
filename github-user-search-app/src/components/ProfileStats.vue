@@ -17,6 +17,14 @@
  </div>
 </template>
 
+<script>
+export default {
+ props: {
+   darkMode: Boolean
+ }
+}
+</script>
+
 
 <style lang="scss" scoped>
   .stats {

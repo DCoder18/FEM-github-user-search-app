@@ -2,7 +2,7 @@
   <div id="app">
     <div class="container">
       <header>
-        <HeaderSection></HeaderSection>
+        <HeaderSection @is-dark="darkMode"></HeaderSection>
       </header>
       <main>
         <SearchBar></SearchBar>
@@ -23,7 +23,13 @@ export default {
     HeaderSection,
     SearchBar,
     ProfileSection,
-  }
+  },
+
+  data() {
+    return {
+      darkMode: false,
+    }
+  },
 }
 </script>
 

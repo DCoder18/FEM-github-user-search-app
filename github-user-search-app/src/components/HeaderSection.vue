@@ -1,7 +1,7 @@
 <template>
   <section class="header">
     <h1>devfinder</h1>
-    <div class="color-switch" @click="darkMode = !darkMode">
+    <div class="color-switch" @click="changeColorScheme()">
       <span class="color-switch__title">Dark</span>
       <img class="icon" src="../assets/images/icon-moon.svg" alt="">
     </div>
@@ -10,13 +10,8 @@
 
 <script>
 export default {
-  name: 'App',
-
-  data() {
-    return {
-      darkMode: true
-    }
-  },
+  name: 'HeaderSection',
+  
 }
 </script>
 
