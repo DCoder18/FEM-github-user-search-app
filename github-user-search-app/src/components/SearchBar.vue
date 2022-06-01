@@ -35,6 +35,7 @@
     font-family: inherit;
     padding-left: 8rem;
     background-color: var(--clr-off-white);
+    caret-color: var(--clr-btn-hover);
 
     &::placeholder {
       color: var(--clr-navy-blue);
@@ -77,6 +78,12 @@
     font-size: var(--fs-300);
     position: absolute;
     right: 1rem;
-    top: 1rem
+    top: 1rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      background-color: var(--clr-btn-hover);
+    }
   }
 </style>
