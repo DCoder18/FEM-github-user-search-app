@@ -10,6 +10,13 @@
   </section>
 </template>
 
+<script>
+  export default {
+    props: {
+      darkMode: Boolean
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
   .searchbar {
@@ -29,9 +36,19 @@
     padding-left: 8rem;
     background-color: var(--clr-off-white);
 
+    &::placeholder {
+      color: var(--clr-navy-blue);
+    }
+
     &.dark-mode {
       background-color: var(--clr-dark-blue);
       color: var(--clr-white);
+      box-shadow: none;
+
+      &::placeholder {
+        color: var(--clr-white);
+      }
+      
     }
 
     @media (max-width:30em) {

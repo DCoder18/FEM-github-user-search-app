@@ -59,8 +59,8 @@ img {
 body {
   font-family: 'Space Mono', monospace;
   font-style: var(--fs-300);
-  color: var(--clr-navy-blue);
   background-color: var(--clr-grey);
+  color: var(--clr-navy-blue);
   line-height: 1.5;
   display: flex;
   justify-content: center;
@@ -68,8 +68,7 @@ body {
   padding: 0 2rem;
 
   &.dark-mode {
-    background-color: var(--clr-dark-blue);
-    color: var(--clr-white);
+    background-color: var(--clr-black-2);
   }
 }
 

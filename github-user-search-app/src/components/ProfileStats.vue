@@ -1,5 +1,5 @@
 <template>
- <div class="stats">
+ <div class="stats" :class="{'dark-mode' : darkMode}">
   <div class="stats__item">
     <h4 :class="{'dark-mode' : darkMode}">Repos</h4>
     <p class="stats--repos" :class="{'dark-mode' : darkMode}">8</p>
@@ -18,11 +18,11 @@
 </template>
 
 <script>
-export default {
- props: {
-   darkMode: Boolean
- }
-}
+  export default {
+    props: {
+      darkMode: Boolean
+    }
+  }
 </script>
 
 
@@ -35,6 +35,10 @@ export default {
     grid-column: 2 / 4; 
     grid-gap: 10rem;
     padding: 1.5rem 3rem;
+
+    &.dark-mode {
+      background-color: var(--clr-black-2);
+    }
 
     @media (max-width:45em) {
       grid-column: 1 / span 3;
@@ -52,7 +56,7 @@ export default {
         font-weight: 400;
 
         &.dark-mode {
-          color: var(--white);
+          color: var(--clr-white);
         }
       }
 
@@ -62,7 +66,7 @@ export default {
         font-weight: 700;
 
         &.dark-mode {
-          color: var(--white);
+          color: var(--clr-white);
         }
       }
     }

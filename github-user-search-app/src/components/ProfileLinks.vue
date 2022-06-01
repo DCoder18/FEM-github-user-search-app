@@ -22,6 +22,14 @@
  </div>
 </template>
 
+<script>
+  export default {
+    props: {
+      darkMode: Boolean
+    }
+  }
+</script>
+
 
 <style lang="scss" scoped>
   .links {
@@ -78,7 +86,7 @@
       color: var(--clr-navy-blue);
 
       &.dark-mode {
-        color: var(--white);
+        color: var(--clr-white);
       }
     }
   }

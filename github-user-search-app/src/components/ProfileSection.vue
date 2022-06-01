@@ -1,8 +1,8 @@
 <template>
-  <section class="profile dark-scheme">
-    <ProfileBasic />
-    <ProfileStats />
-    <ProfileLinks />
+  <section class="profile" :class="{'dark-mode' : darkMode}">
+    <ProfileBasic :darkMode="darkMode" />
+    <ProfileStats :darkMode="darkMode" />
+    <ProfileLinks :darkMode="darkMode" />
   </section>
 </template>
 
@@ -17,7 +17,10 @@ export default {
   components: {
     ProfileBasic,
     ProfileStats,
-    ProfileLinks,
+    ProfileLinks
+  },
+  props: {
+    darkMode: Boolean
   }
 }
 </script>
@@ -31,6 +34,11 @@ export default {
     border-radius: 1.5rem;
     padding: 4.8rem;
     box-shadow: 0px 6px 20px -15px var(--box-shadow-blue);
+
+    &.dark-mode {
+      background-color: var(--clr-dark-blue);
+      box-shadow: none;
+    }
 
     @media (max-width:30em) {
       display: block;

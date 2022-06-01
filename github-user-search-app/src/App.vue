@@ -2,11 +2,11 @@
   <div id="app">
     <div class="container">
       <header>
-        <HeaderSection @is-dark="darkMode"></HeaderSection>
+        <HeaderSection :darkMode="darkMode" />
       </header>
       <main>
-        <SearchBar></SearchBar>
-        <ProfileSection></ProfileSection>
+        <SearchBar :darkMode="darkMode" />
+        <ProfileSection :darkMode="darkMode" />
       </main>
     </div>
   </div>
@@ -29,6 +29,28 @@ export default {
     return {
       darkMode: false,
     }
+  },
+
+  methods: {
+    dark() {
+      document.querySelector('body').classList.add('dark-mode')
+      this.darkMode = true
+      this.$emit('dark')
+    },
+
+    light() {
+      document.querySelector('body').classList.remove('dark-mode')
+      this.darkMode = false
+      this.$emit('light')
+    },
+
+    modeToggle() {
+      if(this.darkMode || document.querySelector('body').classList.contains('dark-mode')) {
+          this.light()
+      } else {
+          this.dark()
+      }
+    },
   },
 }
 </script>

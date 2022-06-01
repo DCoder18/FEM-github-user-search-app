@@ -1,8 +1,8 @@
 <template>
   <section class="header">
-    <h1>devfinder</h1>
-    <div class="color-switch" @click="changeColorScheme()">
-      <span class="color-switch__title">Dark</span>
+    <h1 :class="{'dark-mode' : darkMode}">devfinder</h1>
+    <div class="color-switch" @click="modeToggle">
+      <span :class="{'dark-mode' : darkMode}" class="color-switch__title">Dark</span>
       <img class="icon" src="../assets/images/icon-moon.svg" alt="">
     </div>
   </section>
@@ -10,8 +10,14 @@
 
 <script>
 export default {
-  name: 'HeaderSection',
-  
+  props: {
+    darkMode: Boolean
+  },
+  methods: {
+    modeToggle() {
+      this.$parent.modeToggle();
+    },
+  },
 }
 </script>
 
@@ -28,7 +34,7 @@ export default {
     font-size: var(--fs-600);
 
     &.dark-mode {
-      color: var(--white);
+      color: var(--clr-white);
     }
   }
 
@@ -47,7 +53,7 @@ export default {
       letter-spacing: 2.4px;
 
       &.dark-mode {
-        color: var(--white);
+        color: var(--clr-white);
       }
     }
   }

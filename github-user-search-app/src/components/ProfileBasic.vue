@@ -10,6 +10,13 @@
   </p>
 </template>
 
+<script>
+  export default {
+    props: {
+      darkMode: Boolean
+    }
+  }
+</script>
 
 <style lang="scss" scoped>
   .profile {
@@ -19,7 +26,7 @@
       font-weight: 700;
 
       &.dark-mode {
-        color: var(--white);
+        color: var(--clr-white);
       }
     }
 
@@ -40,7 +47,7 @@
       grid-column: 3 / 4;
 
       &.dark-mode {
-        color: var(--white);
+        color: var(--clr-white);
       }
 
       @media (max-width:45em) {
@@ -55,7 +62,7 @@
       margin-bottom: 3rem;
 
       &.dark-mode {
-        color: var(--white);
+        color: var(--clr-white);
       }
 
       @media (max-width:45em) {
