@@ -35,13 +35,11 @@ export default {
     dark() {
       document.querySelector('body').classList.add('dark-mode')
       this.darkMode = true
-      this.$emit('dark')
     },
 
     light() {
       document.querySelector('body').classList.remove('dark-mode')
       this.darkMode = false
-      this.$emit('light')
     },
 
     modeToggle() {

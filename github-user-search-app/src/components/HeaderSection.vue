@@ -2,8 +2,9 @@
   <section class="header">
     <h1 :class="{'dark-mode' : darkMode}">devfinder</h1>
     <div class="color-switch" @click="modeToggle">
-      <span :class="{'dark-mode' : darkMode}" class="color-switch__title">Dark</span>
-      <img class="icon" src="../assets/images/icon-moon.svg" alt="">
+      <span :class="{'dark-mode' : darkMode}" class="color-switch__title">{{ darkMode ? 'Light' : 'Dark' }}</span>
+      <img v-if="darkMode" class="color-switch__icon" src="../assets/images/icon-sun.svg" alt="">
+      <img v-else class="color-switch__icon" src="../assets/images/icon-moon.svg" alt="">
     </div>
   </section>
 </template>
@@ -40,9 +41,10 @@ export default {
 
   .color-switch {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
 
     &__title {
       text-transform: uppercase;
@@ -55,6 +57,11 @@ export default {
       &.dark-mode {
         color: var(--clr-white);
       }
+    }
+
+    &__icon {
+      width: 2rem;
+      height: 2rem;
     }
   }
 </style>
