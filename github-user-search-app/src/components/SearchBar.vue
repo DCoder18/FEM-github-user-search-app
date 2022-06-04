@@ -4,6 +4,7 @@
       <div class="searchbar">
         <input :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
         <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
+        <div class="error-msg">No results</div>
         <button class="btn-search">Search</button>
       </div>
     </form>
@@ -52,6 +53,10 @@
       
     }
 
+    @media (max-width:45em) {
+      padding-left: 6.5rem;
+    }
+
     @media (max-width:30em) {
       padding-left: 6rem;
     }
@@ -64,6 +69,23 @@
       position: absolute;
       top: 2.2rem;
       left: 2.2rem;
+    }
+  }
+
+  .error-msg {
+    position: absolute;
+    font-size: var(--fs-200);
+    color: var(--clr-error-msg);
+    right: 13rem;
+    top: 2.5rem;
+    display: none;
+
+    @media (max-width:45em) {
+      position: relative;
+      text-align: center;
+      right: 0;
+      top: 0;
+      padding-top: 1rem;
     }
   }
 

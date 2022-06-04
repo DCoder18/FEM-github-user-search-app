@@ -52,6 +52,10 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+
+      &.unavailable {
+        opacity: 50%;
+      }
       
       @media (max-width:30em) {
         margin-bottom: 1.6rem;
@@ -65,9 +69,12 @@
     &--website {
       transition: text-decoration .2s ease-in-out;
 
+      &.unavailable {
+        opacity: 50%;
+      }
+
       &:hover {
         text-decoration: underline;
-        
       }
     }
 
