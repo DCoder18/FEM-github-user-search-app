@@ -51,6 +51,7 @@
     &__item {
       display: flex;
       align-items: center;
+      cursor: pointer;
       
       @media (max-width:30em) {
         margin-bottom: 1.6rem;
@@ -59,25 +60,14 @@
 
     &__icon {
       margin-right: 2rem;
-      
-      &--location {
-        width: 1.4rem;
-        height: 2rem;
-      }
+    }
 
-      &--twitter {
-        width: 2rem;
-        height: 1.6rem;
-      }
+    &--website {
+      transition: text-decoration .2s ease-in-out;
 
-      &--website {
-        width: 1.7rem;
-        height: 1.7rem;
-      }
-
-       &--company {
-        width: 2rem;
-        height: 2rem;
+      &:hover {
+        text-decoration: underline;
+        
       }
     }
 

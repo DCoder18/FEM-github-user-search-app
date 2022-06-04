@@ -5,6 +5,8 @@
   --clr-navy-blue:#4B6A9B;
   --clr-dark-blue: #1E2A47;
 
+  --clr-black: #000000;
+
   --clr-black-1: #2B3442;
   --clr-black-2: #141D2F;
   --clr-black-3: #222731;
@@ -17,6 +19,7 @@
   --box-shadow-blue: #4660BB;
 
   --clr-btn-hover: #60ABFF;
+  --clr-icon-hover: #90A4D4;
 
 
   //typography
@@ -68,6 +71,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+  transition: all .2s linear;
 
   &.dark-mode {
     background-color: var(--clr-black-2);
