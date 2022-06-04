@@ -1,7 +1,7 @@
 <template>
   <img class="profile--img" src="" alt="Img">
   <div>
-    <h2 class="profile--name" :class="{'dark-mode' : darkMode}">The Octocat</h2>
+    <h2 v-for="user in users" :key="user.id" class="profile--name" :class="{'dark-mode' : darkMode}">{{ user.name }}</h2>
     <h3 class="profile--username">@octocat</h3>
   </div>
   <p class="profile--join-date" :class="{'dark-mode' : darkMode}">Joined 25 Jan 2011</p>
@@ -13,7 +13,8 @@
 <script>
   export default {
     props: {
-      darkMode: Boolean
+      darkMode: Boolean,
+      users: Array,
     }
   }
 </script>
