@@ -1,8 +1,8 @@
 <template>
   <section class="profile" :class="{'dark-mode' : darkMode}">
-    <ProfileBasic :darkMode="darkMode" />
-    <ProfileStats :darkMode="darkMode" />
-    <ProfileLinks :darkMode="darkMode" />
+    <ProfileBasic :darkMode="darkMode" :users="users" />
+    <ProfileStats :darkMode="darkMode" :users="users" />
+    <ProfileLinks :darkMode="darkMode" :users="users" />
   </section>
 </template>
 
@@ -19,9 +19,24 @@ export default {
     ProfileStats,
     ProfileLinks
   },
+
   props: {
-    darkMode: Boolean
-  }
+    darkMode: Boolean,
+  },
+
+  data() {
+    return {
+      users: {},
+      name: '',
+    }
+  },
+
+  mounted() {
+    fetch('https://api.github.com/users/mojombo')
+    .then(res => res.json())
+    .then(data => this.users = data)
+    .catch(err => console.log(err.message))
+  },
 }
 </script>
 

@@ -2,17 +2,17 @@
  <div class="stats" :class="{'dark-mode' : darkMode}">
   <div class="stats__item">
     <h4 :class="{'dark-mode' : darkMode}">Repos</h4>
-    <p class="stats--repos" :class="{'dark-mode' : darkMode}">8</p>
+    <p class="stats--repos" :class="{'dark-mode' : darkMode}">{{ users.public_repos }}</p>
   </div>
 
   <div class="stats__item">
     <h4 :class="{'dark-mode' : darkMode}">Followers</h4>
-    <p class="stats--followers" :class="{'dark-mode' : darkMode}">3898</p>
+    <p class="stats--followers" :class="{'dark-mode' : darkMode}">{{ users.followers }}</p>
   </div>
 
   <div class="stats__item">
     <h4 :class="{'dark-mode' : darkMode}">Following</h4>
-    <p class="stats--following" :class="{'dark-mode' : darkMode}">9</p>
+    <p class="stats--following" :class="{'dark-mode' : darkMode}">{{ users.following }}</p>
   </div>
  </div>
 </template>
@@ -20,7 +20,8 @@
 <script>
   export default {
     props: {
-      darkMode: Boolean
+      darkMode: Boolean,
+      users: Object,
     }
   }
 </script>

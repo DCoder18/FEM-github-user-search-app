@@ -1,12 +1,12 @@
 <template>
-  <img class="profile--img" src="" alt="Img">
+  <img class="profile--img" :src=users.avatar_url alt="Img">
   <div>
-    <h2 v-for="user in users" :key="user.id" class="profile--name" :class="{'dark-mode' : darkMode}">{{ user.name }}</h2>
-    <h3 class="profile--username">@octocat</h3>
+    <h2 class="profile--name" :class="{'dark-mode' : darkMode}">{{ users.name }}</h2>
+    <h3 class="profile--username">{{ users.login }}</h3>
   </div>
-  <p class="profile--join-date" :class="{'dark-mode' : darkMode}">Joined 25 Jan 2011</p>
+  <p class="profile--join-date" :class="{'dark-mode' : darkMode}">{{ users.created_at }}</p>
   <p class="profile--bio" :class="{'dark-mode' : darkMode}">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt expedita iste officiis sapiente et ab voluptatibus.
+    {{ users.bio }}
   </p>
 </template>
 
@@ -14,8 +14,8 @@
   export default {
     props: {
       darkMode: Boolean,
-      users: Array,
-    }
+      users: Object,
+    },
   }
 </script>
 
