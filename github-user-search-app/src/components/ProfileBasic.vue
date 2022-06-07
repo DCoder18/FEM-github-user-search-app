@@ -3,11 +3,14 @@
   <div>
     <h2 class="profile--name" :class="{'dark-mode' : darkMode}">{{ users.name }}</h2>
     <h3 class="profile--username">{{ users.login }}</h3>
+    <p class="profile--bio" :class="{'dark-mode' : darkMode, 'unavailable' : !users.bio}">
+    {{ users.bio || 'This profile has no bio' }}
+  </p>
   </div>
   <p class="profile--join-date" :class="{'dark-mode' : darkMode}">Joined {{ formatDate() }}</p>
-  <p class="profile--bio" :class="{'dark-mode' : darkMode}">
-    {{ users.bio }}
-  </p>
+  <!-- <p class="profile--bio" :class="{'dark-mode' : darkMode, 'unavailable' : !users.bio}">
+    {{ users.bio || 'This profile has no bio' }}
+  </p> -->
 </template>
 
 <script>
@@ -50,6 +53,7 @@
       font-size: var(--fs-600);
       color: var(--clr-black-1);
       font-weight: 700;
+      
 
       &.dark-mode {
         color: var(--clr-white);
@@ -71,6 +75,7 @@
       font-size: var(--fs-200);
       color: var(--clr-grey-blue);
       grid-column: 3 / 4;
+      grid-row: 1 / 2;
       padding-top: 0.8rem;
 
       &.dark-mode {
@@ -90,6 +95,10 @@
 
       &.dark-mode {
         color: var(--clr-white);
+      }
+
+      &.unavailable {
+        opacity: 75%;
       }
 
       @media (max-width:45em) {
