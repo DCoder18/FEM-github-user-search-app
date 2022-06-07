@@ -22,6 +22,7 @@ export default {
 
   props: {
     darkMode: Boolean,
+    query: String,
   },
 
   data() {

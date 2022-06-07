@@ -1,11 +1,12 @@
 <template>
   <section class="search">
-    <form action="#" method="post">
+    <form action="#">
       <div class="searchbar">
-        <input :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
+        <input v-model="query" :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
         <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
         <div class="error-msg">No results</div>
-        <button class="btn-search">Search</button>
+        <button @click="updateQuery()" class="btn-search">Search</button>
+        <!-- <p>Query is {{ query }}</p> -->
       </div>
     </form>
   </section>
@@ -15,6 +16,19 @@
   export default {
     props: {
       darkMode: Boolean
+    },
+
+    data() {
+      return {
+        query: ''
+      }
+    },
+
+    methods: {
+      updateQuery() {
+        const q = this.query;
+        console.log(q);
+      }
     }
   }
 </script>
