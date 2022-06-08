@@ -37,7 +37,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column: 2 / 4;
-    grid-gap: 2rem 10rem;
+    grid-gap: 2rem 5rem;
     margin-top: 30px;
 
     @media (max-width:45em) {
@@ -65,6 +65,7 @@
 
     &--website {
       transition: text-decoration .2s ease-in-out;
+      // width: 5rem;
 
       &.unavailable {
         opacity: 50%;
@@ -73,6 +74,11 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+
+    &--company {
+      transition: text-decoration .2s ease-in-out;
+      // width: 5rem;
     }
 
     path.dark-mode {

@@ -3,14 +3,11 @@
   <div>
     <h2 class="profile--name" :class="{'dark-mode' : darkMode}">{{ users.name }}</h2>
     <h3 class="profile--username">{{ users.login }}</h3>
-    <p class="profile--bio" :class="{'dark-mode' : darkMode, 'unavailable' : !users.bio}">
-    {{ users.bio || 'This profile has no bio' }}
-  </p>
   </div>
   <p class="profile--join-date" :class="{'dark-mode' : darkMode}">Joined {{ formatDate() }}</p>
-  <!-- <p class="profile--bio" :class="{'dark-mode' : darkMode, 'unavailable' : !users.bio}">
+  <p class="profile--bio" :class="{'dark-mode' : darkMode, 'unavailable' : !users.bio}">
     {{ users.bio || 'This profile has no bio' }}
-  </p> -->
+  </p>
 </template>
 
 <script>

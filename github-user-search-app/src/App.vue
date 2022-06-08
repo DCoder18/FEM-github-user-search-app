@@ -5,7 +5,7 @@
         <HeaderSection :darkMode="darkMode" />
       </header>
       <main>
-        <SearchBar @update-query="updateQuery($event)" :darkMode="darkMode" />
+        <SearchBar @update-query="updateQuery($event)" :darkMode="darkMode" :usersExists="userExists" :users="users"/>
         <ProfileSection :darkMode="darkMode" :users="users" />
       </main>
     </div>
@@ -30,6 +30,7 @@ export default {
       darkMode: false,
       users: {},
       query: 'mojombo',
+      userExists: false,
     }
   },
 
@@ -60,11 +61,34 @@ export default {
       const url = 'https://api.github.com/users/'
       let updatedURL = `${url}${query}`
 
-       fetch(updatedURL)
+      fetch(updatedURL)
         .then(res => res.json())
         .then(data => this.users = data)
         .catch(err => console.log(err.message))
+
+        // console.log(this.users);
+
+      // console.log(query);
+      // console.log(updatedURL);
+      // console.log(this.users.login);
+
+      // this.checkQuery()
+
+      // if(query == this.users.login) {
+      //   this.userExists = true
+      // } else {
+      //   this.userExists = false
+      // }
+      
+      
+      // console.log(query);
+      // console.log(this.users.login);
+      // console.log(this.userExists);
     },
+
+    // checkQuery() {
+    //   console.log(this.query);
+    // }
   },
 }
 </script>

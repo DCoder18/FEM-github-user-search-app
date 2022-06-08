@@ -4,7 +4,7 @@
       <div class="searchbar">
         <input v-model="query" :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
         <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
-        <div class="error-msg">No results</div>
+        <div v-show="userExists" class="error-msg">No results</div>
         <button @click="$emit('updateQuery', query)" class="btn-search">Search</button>
       </div>
     </form>
@@ -14,7 +14,8 @@
 <script>
   export default {
     props: {
-      darkMode: Boolean
+      darkMode: Boolean,
+      userExists: Boolean
     },
 
     data() {
@@ -22,6 +23,12 @@
         query: ''
       }
     },
+
+    methods: {
+      updateQuery() {
+        console.log(this.users);
+      }
+    }
   }
 </script>
 
@@ -96,7 +103,6 @@
     color: var(--clr-error-msg);
     right: 13rem;
     top: 2.5rem;
-    display: none;
 
     @media (max-width:45em) {
       position: relative;
