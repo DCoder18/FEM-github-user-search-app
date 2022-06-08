@@ -35,8 +35,6 @@ export default {
 
   mounted() {
     this.updateQuery(this.query)
-
-    console.log(`Fetch ${this.updateQuery(this.query)}`)
   },
 
   methods: {
