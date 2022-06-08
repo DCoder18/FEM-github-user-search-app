@@ -5,8 +5,8 @@
         <HeaderSection :darkMode="darkMode" />
       </header>
       <main>
-        <SearchBar :darkMode="darkMode" />
-        <ProfileSection :darkMode="darkMode" />
+        <SearchBar @update-query="updateQuery($event)" :darkMode="darkMode" />
+        <ProfileSection :darkMode="darkMode" :users="users" />
       </main>
     </div>
   </div>
@@ -28,7 +28,15 @@ export default {
   data() {
     return {
       darkMode: false,
+      users: {},
+      query: 'mojombo',
     }
+  },
+
+  mounted() {
+    this.updateQuery(this.query)
+
+    console.log(`Fetch ${this.updateQuery(this.query)}`)
   },
 
   methods: {
@@ -48,6 +56,16 @@ export default {
       } else {
           this.dark()
       }
+    },
+
+    updateQuery(query) {
+      const url = 'https://api.github.com/users/'
+      let updatedURL = `${url}${query}`
+
+       fetch(updatedURL)
+        .then(res => res.json())
+        .then(data => this.users = data)
+        .catch(err => console.log(err.message))
     },
   },
 }

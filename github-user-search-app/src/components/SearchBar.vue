@@ -5,8 +5,7 @@
         <input v-model="query" :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
         <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
         <div class="error-msg">No results</div>
-        <button @click="updateQuery()" class="btn-search">Search</button>
-        <!-- <p>Query is {{ query }}</p> -->
+        <button @click="$emit('updateQuery', query)" class="btn-search">Search</button>
       </div>
     </form>
   </section>
@@ -23,13 +22,6 @@
         query: ''
       }
     },
-
-    methods: {
-      updateQuery() {
-        const q = this.query;
-        console.log(q);
-      }
-    }
   }
 </script>
 
@@ -51,6 +43,18 @@
     padding-left: 8rem;
     background-color: var(--clr-off-white);
     caret-color: var(--clr-btn-hover);
+
+    // Removes X from chrome
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+
+    // Removes X from IE
+    &::-ms-clear {
+      display: none;
+      width : 0; 
+      height: 0;
+    }
 
     &::placeholder {
       color: var(--clr-navy-blue);

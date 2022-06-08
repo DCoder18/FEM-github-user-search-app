@@ -23,19 +23,7 @@ export default {
   props: {
     darkMode: Boolean,
     query: String,
-  },
-
-  data() {
-    return {
-      users: {},
-    }
-  },
-
-  mounted() {
-    fetch('https://api.github.com/users/mojombo')
-    .then(res => res.json())
-    .then(data => this.users = data)
-    .catch(err => console.log(err.message))
+    users: Object,
   },
 }
 </script>
