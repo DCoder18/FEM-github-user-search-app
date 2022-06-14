@@ -5,8 +5,9 @@
         <HeaderSection :darkMode="darkMode" />
       </header>
       <main>
-        <SearchBar @update-query="updateQuery($event)" :darkMode="darkMode" :usersExists="userExists" :users="users"/>
-        <ProfileSection :darkMode="darkMode" :users="users" />
+        <SearchBar @update-query="updateQuery($event)" :darkMode="darkMode" :userExists="userExists" :users="users"/>
+        <ProfileSection v-if="users.login" :darkMode="darkMode" :users="users" />
+        <EmptySearch v-if="!users.login"/>
       </main>
     </div>
   </div>
@@ -16,6 +17,7 @@
 import HeaderSection from './components/HeaderSection.vue'
 import SearchBar from './components/SearchBar.vue'
 import ProfileSection from './components/ProfileSection.vue'
+import EmptySearch from './components/EmptySearch.vue'
 
 export default {
   name: 'App',
@@ -23,13 +25,14 @@ export default {
     HeaderSection,
     SearchBar,
     ProfileSection,
+    EmptySearch,
   },
 
   data() {
     return {
       darkMode: false,
       users: {},
-      query: 'mojombo',
+      query: '',
       userExists: false,
     }
   },
@@ -70,11 +73,14 @@ export default {
 
       // console.log(query);
       // console.log(updatedURL);
-      // console.log(this.users.login);
+      this.userExists = this.users.login == query
+      console.log(this.userExists);
+      console.log(this.users.login);
+      // console.log(this.users.login || query);
 
       // this.checkQuery()
 
-      // if(query == this.users.login) {
+      // if(this.userExists == this.users.login) {
       //   this.userExists = true
       // } else {
       //   this.userExists = false

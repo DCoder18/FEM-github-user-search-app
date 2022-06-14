@@ -4,7 +4,7 @@
       <div class="searchbar">
         <input v-model="query" :class="{'dark-mode' : darkMode}" type="search" name="" id="" placeholder="Search GitHub username...">
         <img class="icon icon--search" src="../assets/images/icon-search.svg" alt="">
-        <div v-show="userExists" class="error-msg">No results</div>
+        <div v-if="userExists" class="error-msg">No results</div>
         <button @click="$emit('updateQuery', query)" class="btn-search">Search</button>
       </div>
     </form>
@@ -22,6 +22,10 @@
       return {
         query: ''
       }
+    },
+
+    computed() {
+      return console.log(userExists)
     },
 
     methods: {
